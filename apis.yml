@@ -1,4 +1,16 @@
 aid: chubao
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/chubao.png
 name: chubao
 description: chubao is a company surfaced as a portfolio company of qiming and added to the API Evangelist
   network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
@@ -9,9 +21,21 @@ x-backed-by:
 - qiming
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-lead-status: dead-domain-parked
+x-lead-status-note: 'Probed 2026-07-18: https://chubao.cn returns HTTP 200 but serves
+  a 4.cn domain-for-sale parking page ("[chubao.cn] is for sale"), not a live company
+  or developer surface. No API, docs, or developer resources exist to enrich. Skip
+  future enrichment runs unless the domain is re-acquired by an operating company.
+  Re-probed 2026-07-20 and confirmed still parked: HTTPS now fails outright (TLS
+  handshake error, "tlsv1 alert internal error"), only http:// responds. WARNING for
+  automated probes: the parking host is a WILDCARD SOFT-200 catch-all -- every path
+  (/.well-known/security.txt, /.well-known/api-catalog, /llms.txt) and every
+  subdomain (api./docs./developer.chubao.cn, wildcard DNS at 208.98.40.0/22) returns
+  HTTP 200 with the identical for-sale HTML. Do NOT record well-known, llms.txt,
+  security.txt or host artifacts from this domain -- they are false positives.'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 apis: []
@@ -23,3 +47,8 @@ maintainers:
 common:
 - type: Website
   url: https://chubao.cn
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
