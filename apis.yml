@@ -33,7 +33,7 @@ x-lead-status-note: 'Probed 2026-07-18: https://chubao.cn returns HTTP 200 but s
   subdomain (api./docs./developer.chubao.cn, wildcard DNS at 208.98.40.0/22) returns
   HTTP 200 with the identical for-sale HTML. Do NOT record well-known, llms.txt,
   security.txt or host artifacts from this domain -- they are false positives.'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 tags:
